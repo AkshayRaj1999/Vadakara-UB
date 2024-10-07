@@ -1,0 +1,32 @@
+@import "../sass/variables";
+
+@mixin primary__button {
+  padding: 8px 20px 8px 20px;
+  border-radius: 4px;
+  background-color: $primary-color;
+  font-size: 12px;
+  font-family: $font-family-base;
+  color: $white-color;
+  font-weight: $font-weight-base + 100;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+@mixin flex__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin para__text {
+  font-size: 16px;
+  font-weight: 400;
+  color: $grey-color;
+  line-height: 22px;
+}
+@mixin footer__header__text {
+  font-size: $font-size-base+2;
+  font-weight: $font-weight-base;
+  line-height: 22px;
+  color: #010101;
+}

@@ -1,0 +1,60 @@
+@import './variables';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: $font-family-base;
+  color: $black-color;
+}
+
+img,
+picture,
+video,
+canvas {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+}
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+}

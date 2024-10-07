@@ -1,0 +1,9 @@
+@import '../../assets/sass/mixins';
+.primary__button{
+    @include primary__button;
+}
+.hero__banner__button{
+    width: max-content;
+    font-weight: 800;
+    padding: 13px 25px;
+}

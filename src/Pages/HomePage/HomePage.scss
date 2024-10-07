@@ -1,0 +1,529 @@
+@import "../../assets/sass/variables";
+@import "../../assets/sass/mixins";
+
+.hero__banner__section {
+  position: relative;
+  top: 0;
+  z-index: -1;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  .hero__banner__content__wrapper {
+    // position: absolute;
+    // top: 50%;
+    // transform: translateY(-50%);
+    // z-index: 5;
+    h1 {
+      font-size: 63px;
+      font-weight: 800;
+      line-height: 68px;
+      text-align: left;
+      color: #010101;
+      margin-bottom: 35px;
+      max-width: 578px;
+    }
+    p {
+      @include para__text;
+      margin-bottom: 42px;
+    }
+    .hero__banner__cta__button {
+      cursor: pointer;
+    }
+    .hero__banner__cta__container {
+      position: absolute;
+      z-index: 1000;
+      bottom: 0;
+      display: flex;
+      align-items: center;
+      margin-bottom: 54px;
+      .tel__cta__container {
+        display: flex;
+        align-items: center;
+        border-right: 1px solid $grey-color;
+        padding-right: 10px;
+        a {
+          padding-left: 11px;
+          color: #010101;
+        }
+      }
+      ul {
+        display: flex;
+        padding-left: 10px;
+        :not(:first-child) {
+          padding-left: 15px;
+        }
+      }
+    }
+  }
+  .align-to-viewport {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50vw;
+    padding-left: 0;
+    padding-right: 0;
+    .hero__banner__image__container {
+      background-color: $secondary-color;
+      position: relative;
+      img {
+        position: absolute;
+      }
+    }
+  }
+}
+.service__section {
+  background-color: #f4f5f9;
+  padding: 100px 0 51px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  h3 {
+    font-size: 36px;
+    font-weight: $font-weight-base;
+    line-height: 43px;
+    text-align: center;
+    color: #343434;
+    margin-bottom: 20px;
+  }
+  h6 {
+    @include para__text;
+    text-align: center;
+    color: #999999;
+    padding: 0 255px;
+    margin-bottom: 45px;
+  }
+  .service__box__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    .service__item {
+      padding: 24px;
+      position: relative;
+      border-right: 1px solid #00000080;
+      // &::after{
+      //   content: '';
+      //   width: 1px;
+      //   background-color: #00000080;
+      //   height: 309px;
+      //   margin-left: 19px;
+      //   display: block;
+      //   position: absolute;
+      //   top:50%;
+      //   right: 0;
+      //   transform: translateY(-50%);
+      // }
+      &:last-child {
+        border-right: unset;
+      }
+      .service__content__wrapper {
+        margin-bottom: 18px;
+        .service__image__container {
+          width: 48px;
+          height: 48px;
+          margin-bottom: 18px;
+        }
+        h3 {
+          font-size: $font-size-base + 6;
+          font-weight: $font-weight-base;
+          line-height: 22px;
+          color: #363940;
+          margin-bottom: 10px;
+          text-align: unset;
+        }
+        p {
+          @include para__text;
+          color: #999999;
+          font-size: 14px;
+        }
+      }
+      button {
+        width: max-content;
+      }
+    }
+  }
+}
+.interest__rate__section {
+  @include flex__center;
+  padding: 90px 0 94px 0;
+  .interest__rate__container {
+    display: flex;
+    justify-content: center;
+    .interest__rate__image__container {
+      position: relative;
+      z-index: 1;
+      .interest__rate__content__container {
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        right: 0;
+        background-color: #010101;
+        border-radius: 53px 53px 0px 53px;
+        padding: 35px 17px 35px 28px;
+        color: $white-color;
+        .savings__account__interest {
+          p {
+            font-size: 12px;
+            font-weight: 900;
+            line-height: 25px;
+          }
+          h4 {
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 25px;
+            color: $primary-color;
+            // margin-bottom: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            border-bottom: 1px solid #b6afaf80;
+            // &::after{
+            //   content: '';
+            //   display: block;
+            //   width: 125px;
+            //   height: 1px;
+            //   background-color:#B6AFAF80;
+            //   bottom: 0;
+            //   position: absolute;
+            // }
+          }
+        }
+        .deposits__interest__rate {
+          padding-top: 18px;
+          p {
+            font-size: 12px;
+            font-weight: 900;
+            line-height: 25px;
+          }
+          h4 {
+            font-size: 24px;
+            font-weight: 900;
+            line-height: 25px;
+            color: $primary-color;
+            // margin-bottom: 20px;
+            position: relative;
+            // &::after{
+            //   content: '';
+            //   display: block;
+            //   width: 125px;
+            //   height: 1px;
+            //   background-color:#B6AFAF80;
+            //   bottom: 0;
+            //   position: absolute;
+            // }
+          }
+        }
+      }
+    }
+    .interest__contents__container {
+      padding-left: 42px;
+      h3 {
+        font-size: 40px;
+        font-weight: 900;
+        line-height: 40px;
+        max-width: 478px;
+        color: $primary-color;
+        margin-bottom: 41px;
+      }
+      p {
+        @include para__text;
+        margin-bottom: 46px;
+      }
+      .interest__rate__cta__button {
+        background-color: transparent;
+        border: 3px solid #0e6fc299;
+        border-radius: 20px;
+        color: $black-color;
+        font-size: 10px;
+        font-weight: 800;
+        line-height: 20px;
+        letter-spacing: 0;
+        text-transform: capitalize;
+        @include flex__center;
+        &::after {
+          content: url(../../assets/images/icons/star.svg);
+          width: 20px;
+          height: 20px;
+          padding-left: 5px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+}
+.loans__scheme__section {
+  .loans__scheme__content__container {
+    background-color: $secondary-color;
+    padding: 65px 160px 30px 180px;
+    border-radius: 30px;
+    .loans__scheme__slider {
+      h6 {
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 20px;
+        color: $primary-color;
+        margin-bottom: 28px;
+      }
+      h3 {
+        font-size: 26px;
+        font-style: italic;
+        font-weight: 800;
+        line-height: 32px;
+        color: $black-color;
+        margin-bottom: 30px;
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        color: $black-color;
+        margin-bottom: 55px;
+      }
+    }
+  }
+  .loans__scheme__image__container {
+    max-width: 400px;
+    height: auto;
+  }
+}
+.deposits__plan__section {
+  padding-top: 36px;
+  padding-bottom: 70px;
+  h3 {
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 48.41px;
+    color: $black-color;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    color: $primary-color;
+    padding-right: 55px;
+    span {
+      font-weight: 800;
+    }
+  }
+  .deposit__circles__container {
+    .circle {
+      h3 {
+        background-color: $primary-color;
+        width: 94px;
+        height: 88px;
+        color: $white-color;
+        font-size: 54px;
+        font-weight: 900;
+        @include flex__center;
+        padding: 20px;
+        border-radius: 50%;
+        margin-bottom: 14px;
+      }
+      p {
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 12.1px;
+        color: $black-color;
+        padding-right: 76px;
+        padding-left: 11px;
+      }
+    }
+  }
+}
+.diverse__deposit__section {
+  background-color: $primary-color;
+  padding-top: 82px;
+  padding-bottom: 32px;
+  .diverse__deposit__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    grid-template-rows: repeat(4, 1fr);
+    img {
+      // object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    height: 440px;
+    .top__left__image__container {
+      grid-area: 1 / 1 / 4 / 2; //grid-area: row-start / column-start / row-end / column-end;
+      border-radius: 15px;
+      border: 1px solid $white-color;
+      overflow: hidden;
+      height: 100%;
+      width: 254px;
+    }
+    .bottom__left__image__container {
+      grid-area: 4/1/5/2;
+      border-radius: 15px;
+      border: 1px solid $white-color;
+      overflow: hidden;
+      height: 100%;
+      width: 254px;
+    }
+    .middle__image__container {
+      grid-area: 1/2/5/3;
+      background-color: coral;
+      border-radius: 15px;
+      border: 1px solid $white-color;
+      overflow: hidden;
+      height: 100%;
+      width: 254px;
+    }
+    .right__top__content__container {
+      grid-area: 1/3/2/4;
+      h3 {
+        font-size: 36px;
+        font-weight: 800;
+        line-height: 54px;
+        color: $white-color;
+      }
+    }
+    .right__middle__content__container {
+      grid-area: 2/3/3/4;
+    }
+    .right__middle__content__container {
+      grid-area: 2/3/3/4;
+      p {
+        font-size: $font-size-base;
+        font-weight: $font-weight-base + 100;
+        line-height: 20.8px;
+        color: $white-color;
+        padding-top: 15px;
+      }
+    }
+    .right__bottom__image__container {
+      grid-area: 3/3/5/4;
+      border-radius: 15px;
+      border: 1px solid $white-color;
+      overflow: hidden;
+      height: 100%;
+    }
+  }
+}
+.testimonial__section {
+  background-color: #f6f7f9;
+  padding-top: 100px;
+  padding-bottom: 55px;
+  h3 {
+    font-size: 48px;
+    font-weight: $font-weight-base;
+    line-height: 62.4px;
+    color: #14181f;
+    text-align: center;
+    padding: 0 290px;
+    margin-bottom: 12px;
+  }
+  p {
+    font-size: $font-size-base + 2;
+    font-weight: $font-weight-base + 100;
+    line-height: 25.2px;
+    text-align: center;
+    padding: 0 212px;
+    color: #525e6f;
+    margin-bottom: 60px;
+  }
+  .testimonial__card__container {
+    .card {
+      padding: 20px 20px 26px 20px;
+      border-radius: 8px;
+      border: none;
+      svg {
+        margin-bottom: 16px;
+      }
+      h4 {
+        @include para__text;
+        color: #14181f;
+        line-height: 24px;
+        margin-bottom: 10px;
+      }
+      .client__container {
+        p {
+          margin: 0;
+          padding: 0;
+        }
+        svg {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}
+.newsletter__section {
+  padding-top: 100px;
+  padding-bottom: 116px;
+  background-color: #fef9fc;
+  .news__letter__container {
+    h3 {
+      font-size: 36px;
+      font-weight: $font-weight-base;
+      line-height: 43px;
+      color: #343434;
+      margin-bottom: 20px;
+    }
+    p {
+      @include para__text;
+      max-width: 410px;
+      text-align: center;
+      margin-bottom: 34px;
+    }
+    form {
+      display: flex;
+      align-items: center;
+      input {
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        padding: 12px 15px;
+        width: 342px;
+        ::placeholder {
+          @include para__text;
+          color: #CCCCCC;
+        }
+      }
+      .news__letter__submit__button {
+        padding: 15px 24px;
+        margin-left: 11px;
+      }
+    }
+  }
+}
+//react-slick-slider pagination custom style
+.custom-dots {
+  bottom: -30px !important;
+  left: 0;
+  bottom: 0;
+  width: max-content;
+}
+
+.custom-dots li {
+  margin: 0 5px;
+}
+
+.custom-dots li.slick-active button:before {
+  color: #c606064d;
+}
+
+.custom-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #c6060699;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.custom-dots li.slick-active .custom-dot {
+  background-color: #c606064d;
+  border: 1px solid #0e6fc2;
+  position: relative;
+  &::after {
+    content: "•";
+    color: #c606064d;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
