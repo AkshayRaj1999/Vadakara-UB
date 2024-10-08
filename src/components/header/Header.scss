@@ -1,4 +1,5 @@
 @import "../../assets/sass/variables";
+@import "../../assets/sass/mixins";
 
 .header__container {
   display: flex;
@@ -14,21 +15,36 @@
   top: 0;
   transition: 0.3s all ease-in-out;
   width: 100%;
+  @media screen and (max-width: 1200px) {
+    background-color: $white-color;
+    justify-content: space-between;
+  }
+  .nav__container {
+    @include flex__center;
+    @media screen and (max-width: 1200px) {
+      justify-content: space-between;
+    }
+  }
   .logo__container {
     max-width: 100px;
     height: auto;
     transition: 0.3s all ease-in-out;
+    @media screen and (max-width: 1200px) {
+      max-width: 60px;
+    }
   }
   .nav__links__container {
     padding-left: 66px;
     padding-right: 34px;
-
+    @media screen and (max-width: 1200px) {
+      display: none;
+    }
     ul {
       display: flex;
 
       li {
         text-transform: uppercase;
-        position: relative; 
+        position: relative;
         cursor: pointer;
 
         a {
@@ -43,24 +59,35 @@
           padding-left: 20px;
         }
         .more__drop__down__list {
-          display: none; 
+          display: none;
           position: absolute;
-          top: 100%; 
+          top: 100%;
           left: 0;
-          background-color: white; 
+          background-color: white;
           box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
           border-radius: 10px;
           transform: translateX(20px);
           li {
-            padding: 10px 15px; 
+            padding: 10px 15px;
             white-space: nowrap;
           }
         }
 
         &:hover .more__drop__down__list {
-          display: block; 
+          display: block;
         }
       }
+    }
+  }
+  .nav__link__hamburger__icon {
+    display: none;
+    @media screen and (max-width: 1200px) {
+      display: block;
+    }
+  }
+  .nav__link__cta__button {
+    @media screen and (max-width: 1200px) {
+      display: none;
     }
   }
 }
@@ -73,4 +100,43 @@
   .logo__container {
     max-width: 60px;
   }
+}
+.nav__links__mobile__container {
+  display: none;
+  @media screen and (max-width: 1200px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 9999;
+    background-color: $white-color;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    overflow: auto;
+    width: 350px;
+    transform: translateX(350px);
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    opacity: 0;
+    visibility: hidden;
+    .close__button__container {
+      margin-bottom: 15px;
+    }
+    ul {
+      margin-bottom: 15px;
+      li {
+        text-transform: uppercase;
+      }
+      :not(:first-child) {
+        padding-top: 10px;
+      }
+    }
+  }
+}
+.nav__links__mobile__container__active {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  -webkit-backdrop-filter: blur(40px);
+  backdrop-filter: blur(40px);
 }

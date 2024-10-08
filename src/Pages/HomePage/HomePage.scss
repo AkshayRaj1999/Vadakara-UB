@@ -1,76 +1,76 @@
 @import "../../assets/sass/variables";
 @import "../../assets/sass/mixins";
 
-.hero__banner__section {
-  position: relative;
-  top: 0;
-  z-index: -1;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  .hero__banner__content__wrapper {
-    // position: absolute;
-    // top: 50%;
-    // transform: translateY(-50%);
-    // z-index: 5;
-    h1 {
-      font-size: 63px;
-      font-weight: 800;
-      line-height: 68px;
-      text-align: left;
-      color: #010101;
-      margin-bottom: 35px;
-      max-width: 578px;
-    }
-    p {
-      @include para__text;
-      margin-bottom: 42px;
-    }
-    .hero__banner__cta__button {
-      cursor: pointer;
-    }
-    .hero__banner__cta__container {
-      position: absolute;
-      z-index: 1000;
-      bottom: 0;
-      display: flex;
-      align-items: center;
-      margin-bottom: 54px;
-      .tel__cta__container {
-        display: flex;
-        align-items: center;
-        border-right: 1px solid $grey-color;
-        padding-right: 10px;
-        a {
-          padding-left: 11px;
-          color: #010101;
-        }
-      }
-      ul {
-        display: flex;
-        padding-left: 10px;
-        :not(:first-child) {
-          padding-left: 15px;
-        }
-      }
-    }
-  }
-  .align-to-viewport {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50vw;
-    padding-left: 0;
-    padding-right: 0;
-    .hero__banner__image__container {
-      background-color: $secondary-color;
-      position: relative;
-      img {
-        position: absolute;
-      }
-    }
-  }
-}
+// .hero__banner__section {
+//   position: relative;
+//   top: 0;
+//   z-index: -1;
+//   height: 100vh;
+//   display: flex;
+//   align-items: center;
+//   .hero__banner__content__wrapper {
+//     // position: absolute;
+//     // top: 50%;
+//     // transform: translateY(-50%);
+//     // z-index: 5;
+//     h1 {
+//       font-size: 63px;
+//       font-weight: 800;
+//       line-height: 68px;
+//       text-align: left;
+//       color: #010101;
+//       margin-bottom: 35px;
+//       max-width: 578px;
+//     }
+//     p {
+//       @include para__text;
+//       margin-bottom: 42px;
+//     }
+//     .hero__banner__cta__button {
+//       cursor: pointer;
+//     }
+//     .hero__banner__cta__container {
+//       position: absolute;
+//       z-index: 1000;
+//       bottom: 0;
+//       display: flex;
+//       align-items: center;
+//       margin-bottom: 54px;
+//       .tel__cta__container {
+//         display: flex;
+//         align-items: center;
+//         border-right: 1px solid $grey-color;
+//         padding-right: 10px;
+//         a {
+//           padding-left: 11px;
+//           color: #010101;
+//         }
+//       }
+//       ul {
+//         display: flex;
+//         padding-left: 10px;
+//         :not(:first-child) {
+//           padding-left: 15px;
+//         }
+//       }
+//     }
+//   }
+//   .align-to-viewport {
+//     position: absolute;
+//     top: 0;
+//     right: 0;
+//     width: 50vw;
+//     padding-left: 0;
+//     padding-right: 0;
+//     .hero__banner__image__container {
+//       background-color: $secondary-color;
+//       position: relative;
+//       img {
+//         position: absolute;
+//       }
+//     }
+//   }
+// }
 .service__section {
   background-color: #f4f5f9;
   padding: 100px 0 51px 0;
@@ -91,15 +91,25 @@
     color: #999999;
     padding: 0 255px;
     margin-bottom: 45px;
+    @media screen and (max-width:1200px) {
+      padding: 0 10px;
+    }
   }
   .service__box__container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
+    @media screen and (max-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
     .service__item {
       padding: 24px;
       position: relative;
       border-right: 1px solid #00000080;
+      @media screen and (max-width : 1200px) {
+        border: none;
+      }
       // &::after{
       //   content: '';
       //   width: 1px;
@@ -477,7 +487,7 @@
         width: 342px;
         ::placeholder {
           @include para__text;
-          color: #CCCCCC;
+          color: #cccccc;
         }
       }
       .news__letter__submit__button {

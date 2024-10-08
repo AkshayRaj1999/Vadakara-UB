@@ -1,0 +1,50 @@
+@import "../../assets/sass/variables";
+@import "../../assets/sass/mixins";
+
+.hero__banner__section {
+  position: relative;
+  height: 100vh;
+  .container {
+    height: 100%;
+    .row {
+      height: 100%;
+    }
+  }
+  .hero__banner__container {
+    .hero__banner__content__container {
+      h1 {
+        font-size: 63px;
+        font-weight: 800;
+        line-height: 68px;
+        color: $black-color;
+        margin-bottom: 35px;
+        padding-top: 50px;
+      }
+      p {
+        @include para__text;
+        margin-bottom: 42px;
+      }
+      .hero__banner__cta__button {
+        margin-bottom: 123px;
+      }
+      ul {
+        :not(:first-child) {
+          padding-left: 18px;
+        }
+      }
+    }
+    .hero__banner__image {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 5;
+      height: 100%;
+      .hero__banner__image__container {
+        background-color: $secondary-color;
+        border-bottom-left-radius: 120px;
+        border-bottom-right-radius: 120px;
+        overflow: hidden;
+      }
+    }
+  }
+}

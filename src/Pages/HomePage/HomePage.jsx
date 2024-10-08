@@ -20,6 +20,7 @@ import bottomLeftImage from "../../assets/images/images/bottomLeftImage.jpg";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import Footer from "../../components/footer/Footer";
+import HeroBanner from "../../components/hero-banner/heroBanner";
 
 function HomePage() {
   const serviceData = [
@@ -110,10 +111,10 @@ function HomePage() {
   return (
     <>
       <Header />
-      <section className="hero__banner__section">
+      {/* <section className="hero__banner__section">
         <div className="container">
           <div className="row">
-            <div className="col col-lg-6">
+            <div className="col col-lg-6 col-md-6">
               <div className="hero__banner__content__wrapper">
                 <h1>Personalized Banking Services Just for You</h1>
                 <p>Innovative Solutions for All Your Financial Needs</p>
@@ -206,14 +207,15 @@ function HomePage() {
                 </div>
               </div>
             </div>
-            <div className="col col-lg-6 align-to-viewport">
+            <div className="col col-lg-6 col-md-6 align-to-viewport">
               <div className="hero__banner__image__container">
                 <img src={bannerImageOne} alt="" />
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <HeroBanner/>
       <section className="service__section">
         <div className="container">
           <h3 className="text-center">
